@@ -28,8 +28,8 @@ class IMGView(View):
           context['imgurl'] = uploaded_file_url
           context['alt'] = myimg.name
           context['content'] = text
-      except:
-        context['message'] = 'Sorry, This is not an image :('
+      except Exception as ex:
+        context['message'] = ex
       return render(request, self.template_name, context)
     else:
       return redirect('img')
