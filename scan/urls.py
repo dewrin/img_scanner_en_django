@@ -4,10 +4,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from .views import IMGView
+import views
+
 
 urlpatterns = [
-    path('', IMGView.as_view(), name='img'),
+    path('', views.index, name='miggi'),
     path('admin/', admin.site.urls),
 ]
 
