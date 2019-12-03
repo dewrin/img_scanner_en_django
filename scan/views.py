@@ -6,7 +6,7 @@ from PIL import Image
 from pytesseract import image_to_string
 from django.shortcuts import render
 from django.http import HttpResponse
-import json
+import json, os
 import time, urllib.request 
 
 class OCR(View):
