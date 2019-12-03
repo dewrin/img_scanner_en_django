@@ -4,11 +4,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-import views
+from .views import OCR
 
 
 urlpatterns = [
-    path('', views.index, name='miggi'),
+    path('', OCR.index, name='miggi'),
     path('admin/', admin.site.urls),
 ]
 
